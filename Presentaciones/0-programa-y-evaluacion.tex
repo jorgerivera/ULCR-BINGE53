@@ -14,7 +14,7 @@
 %\setbeamersize{sidebar width left=50pt}
 
 
-\title[IEC-620]{IEC-620 Microprocesadores}
+\title[BINGE-53]{BINGE-53 Sistemas Digitales II}
 \subtitle{Programa del curso, evaluación y cronograma}
 \author{Prof. Jorge Rivera~Guti\'errez}
 \institute{Universidad Latina de Costa Rica\\ Ingenier\'\i a en Electr\'onica}
@@ -31,20 +31,21 @@
 \begin{frame}
  \begin{center}
   \Large Créditos: 3\\~\\
-  Requisito: Sistemas Digitales II\\~\\
-  Período: VII\\~\\
+  Requisito: Sistemas Digitales I\\~\\
+  Período: VI\\~\\
   Modalidad: cuatrimestral\\~\\
-  Horas te\'oricas: 3\\
-  Horas individuales: 6
  \end{center}
 \end{frame}
 
 \section{Descripción del curso}
 
 \begin{frame}{Descripción del curso}
- El uso cada vez más frecuente de sistemas diseñados para realizar funciones específicas ha llevado a que el estudio de los sistemas embebidos sea un área de creciente interés para quiénes se desempeñan en carreras relacionadas con el área electrónica.
-
-En este curso se aborda el desarrollo de soluciones dedicadas basadas en el uso de sistemas embebidos, con el fin de lograr en el estudiante la construcción de conocimientos sobre esta temática.
+Este curso amplia y ofrece una continuidad de los conocimientos adquiridos en el
+curso de Sistemas Digitales I. Inicia con la realización de máquinas de estados
+finitos; trata los dispositivos de lógica programable y de almacenamiento de
+información y enfatiza en el diseño y programación con los mismos y concluye con
+el estudio de los elementos de interface con los sistemas analógicos y una
+introducción sobre el microprocesador.
 \end{frame}
 
 \section{Objetivos}
@@ -55,7 +56,15 @@ En este curso se aborda el desarrollo de soluciones dedicadas basadas en el uso 
 
 \begin{frame}{Objetivo general}
   \begin{block}{Objetivo general}
-  Desarrollar soluciones a problemas de aplicación a partir del uso de sistemas embebidos.
+  \begin{itemize}
+	\item   Ampliación y nivelación de los conocimientos sobre almacenamiento
+  
+	\item  Ampliar los conocimientos en la terminología, conceptos y utilización de circuitos digitales.
+  
+	\item Comprensión de la teoría digital dirigida al almacenamiento de datos.
+  
+	\item  Introducción a los conceptos básicos de microprocesadores.
+  \end{itemize}
   \end{block}
 \end{frame}
 
@@ -64,10 +73,9 @@ En este curso se aborda el desarrollo de soluciones dedicadas basadas en el uso 
 \begin{frame}{Objetivos específicos}
   \begin{block}{Objetivos específicos}
     \begin{itemize}
-      \item<1> Analizar aspectos generales relacionados con los sistemas embebidos.
-      \item<1> Analizar aspectos generales relacionados con los controladores de interfaz periférica.
-      \item<1> Analizar aspectos generales relacionados con la plataforma Arduino.
-      \item<1> Desarrollar soluciones dedicadas basadas en sistemas embebidos.
+      \item<1> Lograr el dominio sobre el almacenamiento de datos, sus operaciones fundamentales y técnicas.
+      \item<1> Conocer y aplicar los conceptos sobre los tipos de memorias y su funcionamiento.
+      \item<1> Conocer, usar y aplicar conceptos de memoria.
     \end{itemize}
   \end{block}
 \end{frame}
@@ -77,65 +85,78 @@ En este curso se aborda el desarrollo de soluciones dedicadas basadas en el uso 
 
 \pageframe{Contenidos}
 
-\subsection[Principios]{Principios de Sistemas Embebidos}
+\subsection[Máquinas]{Máquinas Secuenciales de Estados Finitos}
 
-\begin{frame}{Principios de Sistemas Embebidos}
+\begin{frame}{Máquinas Secuenciales de Estados Finitos}
   \begin{block}{}
   \begin{itemize}
-    \item Arquitecturas
-    \item Lenguaje Ensamblador
-    \item \sout{Lenguaje C++}
+    \item Máquinas síncronas y asíncronas.
+    \item Diagramas de estados.
+    \item Máquinas secuenciales: Modelos de Mealy y Moore.
+    \item Controladores de Richards.
+    \item Diseño de sistemas de control con máquinas secuenciales.
   \end{itemize}
   \end{block}
 \end{frame}
 
-\subsection[PICs]{PICs}
+\subsection[PLD]{Dispositivos de Lógica Programable (PLD)}
 
-\begin{frame}{PICs}
+\begin{frame}{Dispositivos de Lógica Programable (PLD)}
 \begin{block}{}
 \begin{itemize}
- \item Características
- \item Repertorio de Instrucciones
- \item Memorias
- \item Puertos I/O
- \item Conversores A/D
- \item Comparadores
- \item Temporizadores
- \item Módulo de Comunicación
+ \item Clasificación de los PLD según su arquitectura.
+ \item Dispositivos PLD, SPLD, CPLD y FPGA
+ \item Programación de dispositivos PLD.
+ \item Introducción a los lenguajes de descripción de circuitos (HDL)
 \end{itemize}
 \end{block}
 \end{frame}
 
-%\subsection[Arduino]{Plataforma Arduino}
-%
-%\begin{frame}{Arduino}
-%\begin{block}{}
-%\begin{itemize}
-% \item Estructura Interna
-% \item IDE
-% \item Estructura de un Sketch
-% \item Variables y Constantes
-% \item Funciones
-% \item Bloques
-% \item Estructuras de Datos
-% \item Librerías Estándar
-%\end{itemize}
-%\end{block}
-%\end{frame}
-%
-%\subsection[Desarrollo]{Desarrollo de Soluciones}
-%
-%\begin{frame}{Desarrollo de Soluciones}
-%\begin{block}{}
-%\begin{itemize}
-% \item Uso de LCDs
-% \item Uso de la Memoria
-% \item Uso de I/Os
-% \item Uso de Sensores
-% \item Uso de la Comunicación en Red
-%\end{itemize}
-%\end{block}
-%\end{frame}
+\subsection[Almacenamiento]{Dispositivios de almacenamiento de información}
+
+\begin{frame}{Dispositivios de almacenamiento de información}
+\begin{block}{}
+\begin{itemize}
+ \item Arquitectura de una memoria.
+ \item Clasificación de las memorias semiconductoras.
+ \item Parámetros de fabricante.
+ \item Memorias de solo lectura.
+ \item Memorias de lectura y escritura.
+ \item Diagramas temporales de memorias.
+ \item Arreglos y bancos de memoria.
+ \item Diseño de sistemas de decodificación de memoria.
+ \item Distribución y tipos de memoria en una computadora personal.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection[Interface]{Interface con Sistemas Analógicos}
+
+\begin{frame}{Interface con Sistemas Analógicos}
+\begin{block}{}
+\begin{itemize}
+ \item Principio de conversión analógico-digital (A/D) y digital-analógico (D/A).
+ \item Tipos de convertidores.
+ \item Errores presentes en los convertidores.
+ \item Convertidores D/A
+ \item Convertidores A/D
+ \item Simbología y parámetros de fabricante
+\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection[Microprocesador]{Introducción sobre el microprocesador}
+
+\begin{frame}{Introducción sobre el microprocesador}
+\begin{block}{}
+\begin{itemize}
+ \item El concepto de computadora digital.
+ \item Organización del sistema de computadora básica.
+ \item Elementos básicos de una microcomputadora
+ \item El microprocesador.
+\end{itemize}
+\end{block}
+\end{frame}
 
 \section{Metodología}
 
@@ -143,7 +164,7 @@ En este curso se aborda el desarrollo de soluciones dedicadas basadas en el uso 
 
 \begin{frame}{Metodología}
 
-Este es un curso en el que se aprovechan los conocimientos y experiencias de los estudiantes para posibilitar un aprendizaje permanente y significativo, desde el punto de vista del análisis crítico, reflexivo y creativo de resolución de problemas. Con este fin se desarrollan métodos participativos y colaborativos que enriquecen la experiencia de enseñanza y aprendizaje, así como la motivación del estudiante, en un ambiente de respeto mutuo por las opiniones y en donde la ética es parte del compromiso permanente de todos los actores del proceso formativo.
+Se emplearán estrategias didácticas que favorezcan la construcción del conocimiento y el aprendizaje significativo. Se desarrollarán prácticas de carácter comprobatorio, como funcionamiento de proyectos de diseño que solucionen problemas propuestos por el docente.
 
 \end{frame}
 
@@ -151,43 +172,11 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 
 \pageframe{Estrategias de aprendizaje}
 
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Charlas Didácticas}
-    El docente realiza la exposición de los contenidos temáticos en forma de exposición oral interactiva. A través de ella se logra la transmisión de conocimientos y se ofrece un enfoque crítico de la disciplina, con lo que se lleva a los discentes a descubrir las relaciones que existen entre los diversos conceptos.
-  \end{block}
+\begin{frame}{Estrategias de aprendizaje} 
+
+\begin{footnotesize}   Dentro de la estrategia metodológica que se plantea, se pretende al estudiante como protagonista y responsable de su proceso de aprendizaje a través de un proceso de planificación sistemática de los contenidos del curso en el que se entrelazan contenidos generales y específicos de ingeniería. Estos constituyen la  columna vertebral sobre la que se propiciarán los instrumentos teóricos propios de la disciplina con la que se proveen opciones para aprender por sí mismo, desarrollar la capacidad de pensar y la habilidad para la solución de problemas, construyendo colectivamente el conocimiento, así como desarrollar la capacidad de poder evaluar y tomar decisiones acerca de su propio proceso de aprendizaje desarrollando habilidades cognitivas y capacidades mediante la redacción de informes, la resolución de problemas, los proyectos individuales, el trabajo en equipo y estimulando las capacidades de comunicación de los educandos con una  profunda aplicación de las tecnologías de la información y las comunicaciones e Internet.
+\end{footnotesize}
 \end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Discusiones guiadas:}
-    Permite que el docente y los estudiantes intercambien criterios acerca de un contenido temático determinado. El profesor inicia la discusión introduciendo el tema y solicita a los discentes su participación a partir de lo que conozcan del mismo. Debe participar la mayoría del grupo, de manera tal que todos escuchen y se involucren activamente en la discusión. Al final se debe generar un resumen de los tópicos abordados.  \end{block}
-\end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Investigaciones Grupales:}
-     A los estudiantes se les asignan temas que deberán desarrollar grupalmente. El profesor asume el rol de tutor en el proceso de resolución de las mismas.
-  \end{block}
-\end{frame}
-
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Proyectos Integradores:} 
-    Conllevan un desarrollo grupal de prototipos por medio de los que se genera una solución a un problema de aplicación y tienen como fin el hacer confluir diferentes temas específicos. En ellos el docente funge como tutor del proceso de generación de las soluciones.  
-  \end{block}
-\end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Resolución de Problemas:} 
-    Los estudiantes abordan problemas bajo la supervisión del profesor. Permite desarrollar en ellos capacidades asociadas a la comprensión de un problema, el uso de sus conocimientos para darle una explicación, la organización de ideas y el uso de procedimientos para lograr una respuesta.
-  \end{block}
-\end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Visitas Técnicas:} 
-    Son visitas de orientación técnica a sitios en los que se desarrollan actividades ligadas a objetivos específicos del curso, que permiten a los estudiantes complementar las temáticas abordadas en clase. En ellas el docente asume el rol de guía, con el fin de aprovechar al máximo la experiencia.
-
-  \end{block}
-\end{frame}
-
 
   
 \section{Evaluaci\'on}
@@ -197,9 +186,10 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Evaluación}
 \begin{center}
 \begin{tabular}{|l|r|}\hline
-	2 Pruebas escritas	&	60\%\\\hline
-	1 Proyecto integrador	&	30\%\\\hline
-	2 Investigaciones	&	10\%\\\hline\hline
+	2 Exámenes parciales	&	40\%\\\hline
+	1 Examen final		&	30\%\\\hline
+	4 Proyectos de laboratorio &	20\%\\\hline
+	Tareas y quices	&	10\%\\\hline\hline
 	TOTAL			&	100\%\\\hline
 \end{tabular}
 \end{center}
